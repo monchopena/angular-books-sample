@@ -58,6 +58,7 @@
       }
     ];
 
+	/*jshint validthis: true */
     this.getTec = getTec;
 
     function getTec() {

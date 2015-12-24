@@ -2609,10 +2609,38 @@
   "published": "2007-08-07T23:57:12.614Z"
 }];
 
+	/*jshint validthis: true */
     this.getBooks = getBooks;
 
-    function getBooks() {
-      return data;
+    function getBooks(category, genre) {
+	  //console.log('category: '+category);
+	  //console.log('genre: '+genre);
+	  var temp = [];
+	  for (var w = 0; w < data.length; w++) {
+		//console.log(data[w].genre.category);
+		if (category === '' && genre === '') {
+			temp.push(  data[w]  );
+		}
+		
+		if (category !== '' && genre === '') {
+			if (category === data[w].genre.category) {
+				temp.push(  data[w]  );
+			}
+		}
+		
+		if (category === '' && genre !== '') {
+			if (genre === data[w].genre.name) {
+				temp.push(  data[w]  );
+			}
+		}
+		
+		if (category !== '' && genre !== '') {
+			if (category === data[w].genre.category && genre === data[w].genre.name) {
+				temp.push(  data[w]  );
+			}
+		}
+	  }
+      return temp;
     }
     
     
@@ -2631,8 +2659,8 @@
 	  temp.sort();
 	  //console.log(temp);
 	  
-	  for (var i = 0; i < temp.length; i++) {
-			result.push({ name: temp[i] });  
+	  for (var j = 0; j < temp.length; j++) {
+			result.push({ name: temp[j] });  
 	  }
 	  
        //return [ { name: '222' }, { name: '333' }];
@@ -2644,10 +2672,10 @@
     function getGenres() {
       var temp = [];
 	  var result = [];
-	  for (var i = 0; i < data.length; i++) {
-		  //console.log(data[i].genre.category);
-		  if (temp.indexOf(data[i].genre.name) === -1) {
-			  temp.push(  data[i].genre.name  );
+	  for (var K = 0; K < data.length; K++) {
+		  //console.log(data[K].genre.category);
+		  if (temp.indexOf(data[K].genre.name) === -1) {
+			  temp.push(  data[K].genre.name  );
 		  }
 		  
 	  }

@@ -6,7 +6,7 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($timeout, booksService) {
+  function MainController($timeout, $scope, booksService) {
     var vm = this;
 
     vm.books = [];
@@ -18,13 +18,23 @@
     
     vm.categories = [];
     vm.genres = [];
+    
+    $scope.selectCategory='';
+	$scope.selectGenre='';
+	
+    
+    $scope.update = function () {
+	    //console.log('$scope.selectCategory: ' + $scope.selectCategory);
+		//console.log('$scope.selectGenre: ' + $scope.selectGenre);
+		getBooks($scope.selectCategory, $scope.selectGenre);
+    };
 
     activate();
 
     function activate() {
 	  getCategories();
 	  getGenres();
-      getBooks();
+      getBooks($scope.selectCategory, $scope.selectGenre);
       $timeout(function() {
         vm.classAnimation = 'rubberBand';
       }, 4000);
@@ -38,12 +48,13 @@
 		vm.genres = booksService.getGenres();
 	}
 
-    function getBooks() {  
-      vm.books = booksService.getBooks();
-
+    function getBooks(category, genre) {  
+      vm.books = booksService.getBooks(category, genre);
+	  
       angular.forEach(vm.books, function(book) {
-        book.rank = Math.random();
+        book.moment = moment(book.published).fromNow();
       });
+      
     }
   }
 })();
