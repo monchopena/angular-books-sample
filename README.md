@@ -46,7 +46,8 @@ gulp serve
 
 ### One more thing
 
-- [my-book
+[my-book
  directive](https://github.com/monchopena/angular-books-sample/blob/master/src/app/components/books/books.service.js#L7)
- - [SCSS File](https://github.com/monchopena/angular-books-sample/blob/master/src/app/index.scss)
- - [getBooks Function](https://github.com/monchopena/angular-books-sample/blob/master/src/app/components/books/books.service.js#L2624)
+
+[SCSS File](https://github.com/monchopena/angular-books-sample/blob/master/src/app/index.scss)
+[getBooks Function](https://github.com/monchopena/angular-books-sample/blob/master/src/app/components/books/books.service.js#L28)
