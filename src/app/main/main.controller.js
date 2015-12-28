@@ -9,7 +9,7 @@
   function MainController($timeout, $scope, booksService) {
     var vm = this;
 
-    vm.books = [];
+    vm.books='';
     vm.classAnimation = '';
     vm.creationDate = 1450816156304;
 
@@ -40,6 +40,8 @@
         vm.classAnimation = 'rubberBand';
       }, 4000);
     }
+
+
 
     function getCategories() {
       vm.categories = booksService.getCategories();
