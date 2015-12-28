@@ -1,0 +1,17 @@
+<div class="thumbnail">
+  <a ng-href="#/book/{{book.id}}">
+    <img ng-src="{{book.cover}}" alt="{{book.title}}">
+  </a>
+  <div class="caption">
+    <h4>
+      <a ng-href="#/book/{{book.id}}">{{book.name}}</a>
+    </h4>
+    <p>{{book.author.name}}</p>
+  </div>
+  <div class="ratings">
+    <p class="pull-right">{{book.likes}} likes</p>
+    <p>
+      {{ book.genre.category }} - {{ book.genre.name }}
+    </p>
+  </div>
+</div>
