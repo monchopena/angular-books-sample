@@ -1,0 +1,12 @@
+<div class="wrapper">
+  <div class="form-signin">
+    <img class="profile-img-card" ng-src="{{intro.image.src}}" alt="{{intro.image.alt}}">
+    <label class="checkbox">
+      <input type="checkbox" ng-model="checkboxModel.show">To continue: you should check this box, accepting that the guy in the picture is cool
+    </label>
+    <div ng-show="checkboxModel.show">
+      <h4>Seriously?</h4>
+      <button class="btn btn-lg btn-primary btn-block" type="button" ng-click="goHome()">Let's go</button>
+    </div>
+  </div>
+</div>

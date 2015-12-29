@@ -44,7 +44,7 @@ gulp serve
 - `$ gulp protractor` to launch your e2e tests with Protractor
 - `$ gulp protractor:dist` to launch your e2e tests with Protractor on the dist files
 
-### One more thing
+## One more thing
 
 [my-book
  directive](https://github.com/monchopena/angular-books-sample/blob/master/src/app/components/books/books.service.js#L7)
@@ -52,3 +52,7 @@ gulp serve
 [SCSS File](https://github.com/monchopena/angular-books-sample/blob/master/src/app/index.scss)
 
 [getBooks Function](https://github.com/monchopena/angular-books-sample/blob/master/src/app/components/books/books.service.js#L28)
+
+## Resume
+
+- Modules.

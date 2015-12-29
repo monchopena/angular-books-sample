@@ -4,6 +4,7 @@
   angular
     .module('books')
     .service('booksService', booksService)
+    /* A directive for a Book so we can use in 2 files */
     .directive('myBook', function() {
       return {
         restrict: 'E',
@@ -18,7 +19,6 @@
   function booksService($rootScope) {
 
     //console.log($rootScope.myBooks);
-
     var data = $rootScope.myBooks;
 
     /*jshint validthis: true */
@@ -78,7 +78,6 @@
         });
       }
 
-      //return [ { name: '222' }, { name: '333' }];
       return result;
     }
 
@@ -103,7 +102,6 @@
         });
       }
 
-      //return [ { name: '222' }, { name: '333' }];
       return result;
     }
 
