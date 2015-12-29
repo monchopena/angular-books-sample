@@ -55,4 +55,8 @@ gulp serve
 
 ## Resume
 
-- Modules.
+- All modules are loaded from [src/app/index.module.js](https://github.com/monchopena/angular-books-sample/blob/master/src/app/index.module.js#L5)
+- Routes are in [src/app/index.route.js](https://github.com/monchopena/angular-books-sample/blob/master/src/app/index.route.js#L28)
+- JSON is called here [src/app/index.run.js](https://github.com/monchopena/angular-books-sample/blob/master/src/app/index.run.js#L17)
+- There are a Directive and Services about books here [src/app/components/books/books.service.js](https://github.com/monchopena/angular-books-sample/blob/master/src/app/components/books/books.service.js)
+- my-book directive is used: [src/app/main/main.html](https://github.com/monchopena/angular-books-sample/blob/master/src/app/main/main.html#L45) and [/src/app/book/book.html](https://github.com/monchopena/angular-books-sample/blob/master/src/app/book/book.html#L47)
